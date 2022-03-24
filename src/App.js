@@ -3,9 +3,9 @@ import Sidebar from './Sidebar'
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col">
     <Sidebar />
-      <header className="App-header">
+      <header className="flex flex-col">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
