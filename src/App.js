@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import Sidebar from './Sidebar'
+import Sidebar from './sideBar/Sidebar'
 
 function App() {
   return (

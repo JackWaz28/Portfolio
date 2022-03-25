@@ -1,0 +1,8 @@
+.facePic {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    image-rendering: crisp-edges;
+  }
