@@ -1,0 +1,6 @@
+.homePic {
+    object-fit: cover;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+  }

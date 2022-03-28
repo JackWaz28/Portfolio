@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import Sidebar from './sideBar/Sidebar'
+import "./homePic.css"
 
 function App() {
   return (
-    <div className="flex flex-col">
-    <Sidebar />
-      <header className="flex flex-col">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased">
+      <Sidebar />
+      <div className="h-full w-full ml-14 mt-0 mb-10 md:ml-64">
+        <img src="soloHiking.jpg" className="object-cover h-auto w-full"></img>
+        <div classname="flex justify-center flex-row" >
+          <p> HELLLLLLLLLLLLLLLLLLLLLOOOOOOOOOOOOOOOOOOO </p>
+        </div>
+      </div>
     </div>
   );
 }

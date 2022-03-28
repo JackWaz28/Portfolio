@@ -3,7 +3,7 @@ import "./facePic.css"
 export default function Sidebar() {
     return (<>
       <div className="fixed flex flex-col top-0 left-0 w-14 hover:w-64 md:w-64 bg-blue-900 dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
-          <div className="flex flex-shrink-0 items-center justify-center h-36 border-b space-x-3 flex-col ">
+          <div className="flex flex-shrink-0 mt-10 items-center justify-center h-36  space-x-3 flex-col ">
             <img src="SECProfilePicCropped.jpg" className="facePic"></img>
             <p className="text-2xl font-semibold text-center">Jack Wasilewski</p>
           </div>
@@ -11,7 +11,7 @@ export default function Sidebar() {
           <ul className="flex flex-col py-4 space-y-1">
             <li className="px-5 hidden md:block">
               <div className="flex flex-row items-center h-8">
-                <div className="text-sm font-light tracking-wide text-gray-400 uppercase">Main</div>
+                <div className="text-sm font-light tracking-wide text-gray-400">Shortcuts</div>
               </div>
             </li>
             <li>
