@@ -1,5 +1,6 @@
 .homePic {
-    object-fit: cover;
+    /* object-fit: cover; */
+    width: screen;
     height: auto;
     display: inline-block;
     overflow: hidden;

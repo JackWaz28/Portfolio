@@ -4,13 +4,11 @@ import "./homePic.css"
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased">
+    <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 antialiased">
       <Sidebar />
-      <div className="h-full w-full ml-14 mt-0 mb-10 md:ml-64">
-        <img src="soloHiking.jpg" className="object-cover h-auto w-full"></img>
-        <div classname="flex justify-center flex-row" >
-          <p> HELLLLLLLLLLLLLLLLLLLLLOOOOOOOOOOOOOOOOOOO </p>
-        </div>
+      <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-red-100 md:ml-64">
+        <img src="soloHiking.jpg" className="w-max h-auto z-0"></img>
+        <p className="text-center absolute top-1/4 left-1/2 px-10 py-10 bg-red-100"> I am Jack Wasilewski<br></br>I am a Coder</p>
       </div>
     </div>
   );
