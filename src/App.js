@@ -35,14 +35,15 @@ function App() {
       <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-green-400 md:ml-64">
         <h3 className="mt-20 mr-30 ml-20 font-bold text-2xl"> My Skills: </h3>
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-4 gap-4">
-          <div className="bg-slate-100 justify-center ml-20"> 
-            <img src="React-icon.png" className="h-40 justify-center"></img>
+          <div className="bg-slate-100 ml-20"> 
+            <img className="mx-auto h-40" src="React-icon.png"></img>
+            <p className='text-center'></p>
           </div>
           <div className="bg-slate-100 justify-center ml-20"> 
-            <img src="Node_logo.png" className="h-40 "></img>
+            <img src="Node_logo.png" className="mx-auto h-40 "></img>
           </div>
           <div className="bg-slate-100 justify-center ml-20"> 
-            <img src="Sql_logo.png" className="h-40"></img>
+            <img src="Sql_logo.png" className="mx-auto h-40"></img>
           </div>
         </div>
       </div>
