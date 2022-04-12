@@ -34,16 +34,53 @@ function App() {
       </div>
       <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-green-400 md:ml-64">
         <h3 className="mt-20 mr-30 ml-20 font-bold text-2xl"> My Skills: </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-4 gap-4">
-          <div className="bg-slate-100 ml-20"> 
-            <img className="mx-auto h-40" src="React-icon.png"></img>
-            <p className='text-center'></p>
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 p-4 gap-4">
+          <div className="bg-slate-100 ml-10"> 
+            <img className="mx-auto h-40 mt-2" src="React-icon.png"></img>
+            <p className='text-center mt-5'> REACT </p>
           </div>
-          <div className="bg-slate-100 justify-center ml-20"> 
-            <img src="Node_logo.png" className="mx-auto h-40 "></img>
+          <div className="bg-slate-100 justify-center ml-10"> 
+            <img src="Node_logo.png" className="mx-auto h-40 mt-2"></img>
+            <p className='text-center mt-5'> NODE JS </p>
           </div>
-          <div className="bg-slate-100 justify-center ml-20"> 
-            <img src="Sql_logo.png" className="mx-auto h-40"></img>
+          <div className="bg-slate-100 justify-center ml-10"> 
+            <img src="Sql_logo.png" className="mx-auto h-40 mt-2"></img>
+            <p className='text-center mt-5'> SQL </p>
+          </div>
+          <div className="bg-slate-100 justify-center ml-10"> 
+            <img src="firebase_logo.png" className="mx-auto h-40 mt-2"></img>
+            <p className='text-center mt-5'> Firebase </p>
+          </div>
+          <div className="bg-slate-100 justify-center ml-10 mt-2"> 
+            <img src="CSS.png" className="mx-auto h-40 mt-2"></img>
+            <p className='text-center mt-5'> CSS </p>
+          </div>
+          <div className="bg-slate-100 justify-center ml-10"> 
+            <img src="HTML.png" className="mx-auto h-40 mt-2"></img>
+            <p className='text-center mt-5'> HTML </p>
+          </div>
+          <div className="bg-slate-100 justify-center ml-10"> 
+            <img src="JS.png" className="mx-auto h-40 mt-2"></img>
+            <p className='text-center mt-5'> JS </p>
+          </div>
+          <div className="bg-slate-100 justify-center ml-10"> 
+            <img src="cplusplus_logo.png" className="mx-auto h-40 mt-2"></img>
+            <p className='text-center mt-5'> C++ </p>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-orange-400 md:ml-64">
+        <h1 className="mt-20 mr-30 ml-40 font-bold text-4xl"> Projects</h1>
+        <div className="flex flex-row">
+          <div className="bg-slate-100 mt-10 ml-60 max-w-lg"> 
+            <img src="geekhunt.png" className="mx-auto rounded-full h-80 mt-5"></img>
+            <p className="text-center mt-5 font-bold text-4xl"> GEEK HUNT</p>
+            <p className="mt-3 ml-5 mr-5 mb-5 text-center text-xl"> A Freelancer Site For Connecting With Others</p>
+          </div>
+          <div className="bg-slate-100 mt-10 ml-40 max-w-lg"> 
+            <img src="IMDB_logo.png" className="mx-auto h-80 mt-5"></img>
+            <p className="text-center mt-5 font-bold text-4xl"> GEEK HUNT</p>
+            <p className="mt-3 ml-5 mr-5 mb-5 text-center text-xl"> A Freelancer Site For Connecting With Others</p>
           </div>
         </div>
       </div>
