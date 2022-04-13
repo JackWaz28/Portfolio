@@ -72,15 +72,17 @@ function App() {
       <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-orange-400 md:ml-64">
         <h1 className="mt-20 mr-30 ml-40 font-bold text-4xl"> Projects</h1>
         <div className="flex flex-row">
-          <div className="bg-slate-100 mt-10 ml-60 max-w-lg"> 
-            <img src="geekhunt.png" className="mx-auto rounded-full h-80 mt-5"></img>
+          <div className="bg-slate-100 z-5 ml-60 mt-5 max-w-lg"> 
+            <img src="geekhunt.png" className="mx-auto z-0 rounded-full h-80 mt-5"></img>
             <p className="text-center mt-5 font-bold text-4xl"> GEEK HUNT</p>
-            <p className="mt-3 ml-5 mr-5 mb-5 text-center text-xl"> A Freelancer Site For Connecting With Others</p>
+            <p className="mt-3 ml-5 mr-5 mb-2 text-center text-xl"> A Freelancer Site For Connecting With Others</p>
+            <button className="ml-40 mb-3 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full"> More Details</button>
           </div>
-          <div className="bg-slate-100 mt-10 ml-40 max-w-lg"> 
+          <div className="bg-slate-100 mt-5 ml-40 max-w-lg"> 
             <img src="IMDB_logo.png" className="mx-auto h-80 mt-5"></img>
-            <p className="text-center mt-5 font-bold text-4xl"> GEEK HUNT</p>
-            <p className="mt-3 ml-5 mr-5 mb-5 text-center text-xl"> A Freelancer Site For Connecting With Others</p>
+            <p className="text-center mt-5 font-bold text-4xl"> Movie Matcher</p>
+            <p className="mt-3 ml-5 mr-5 mb-5 text-center text-xl"> A Site To Help Pick Out Movies With a Partner</p>
+            <p className="mt-2 mb-3 text-center bg-orange-500 text-white"> STILL IN PROGRESS</p>
           </div>
         </div>
       </div>
