@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import Sidebar from './sideBar/Sidebar'
 import "./homePic.css"
+import anime from "animejs/lib/anime.es.js"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Scrollbar, A11y, Autoplay } from 'swiper';
@@ -13,12 +14,75 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 
 function Home() {
+
+   var ml4 = {};
+   ml4.opacityIn = [0,1];
+   ml4.scaleIn = [0.2, 1];
+   ml4.scaleOut = 3;
+   ml4.durationIn = 800;
+   ml4.durationOut = 600;
+   ml4.delay = 500;
+
+   anime.timeline({loop: true})
+   .add({
+      targets: '.ml4 .letters-1',
+      opacity: ml4.opacityIn,
+      scale: ml4.scaleIn,
+      duration: ml4.durationIn
+   }).add({
+      targets: '.ml4 .letters-1',
+      opacity: 0,
+      scale: ml4.scaleOut,
+      duration: ml4.durationOut,
+      easing: "easeInExpo",
+      delay: ml4.delay
+   }).add({
+      targets: '.ml4 .letters-2',
+      opacity: ml4.opacityIn,
+      scale: ml4.scaleIn,
+      duration: ml4.durationIn
+   }).add({
+      targets: '.ml4 .letters-2',
+      opacity: 0,
+      scale: ml4.scaleOut,
+      duration: ml4.durationOut,
+      easing: "easeInExpo",
+      delay: ml4.delay
+   }).add({
+      targets: '.ml4 .letters-3',
+      opacity: ml4.opacityIn,
+      scale: ml4.scaleIn,
+      duration: ml4.durationIn
+   }).add({
+      targets: '.ml4 .letters-3',
+      opacity: 0,
+      scale: ml4.scaleOut,
+      duration: ml4.durationOut,
+      easing: "easeInExpo",
+      delay: ml4.delay
+   }).add({
+      targets: '.ml4',
+      opacity: 0,
+      duration: 500,
+      delay: 500
+   });
+
+
   return (
     <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 antialiased">
       <Sidebar />
       <div id="home" className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 md:ml-64">
         <img src="soloHiking.jpg" className="w-auto h-screen z-0"></img>
-        <p className="text-center absolute top-1/4 left-1/2 px-10 py-10 bg-red-100"> I am Jack Wasilewski<br></br>I am a Coder</p>
+        {/* <p className="text-center absolute top-1/4 left-1/2 px-10 py-10 bg-red-100"> I am Jack Wasilewski<br></br>I am a Coder</p> */}
+        <div className="text-center absolute top-20 left-1/4 px-10 py-10">
+        <span className='iamJack'>I am Jack Wasilewski and I am a</span>
+            <h1 className="ml4">
+               <span className="letters letters-1">Coder</span>
+               <span className="letters letters-2">Engineer</span>
+               <span className="letters letters-3">Nerdy</span>
+            </h1>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+         </div>
       </div>
       <div id="about" className="flex flex-col flex-auto flex-shrink-0 bg-slate-300 md:ml-64">
         <div className="mt-20  mb-20 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-4 gap-4">
@@ -43,7 +107,7 @@ function Home() {
         </div>
       </div>
       <div id="skills" className="flex flex-col flex-auto flex-shrink-0 bg-slate-200 mb-10 md:ml-64">
-        <h3 className="mt-20 mr-30 ml-20 mb-10 font-bold text-2xl"> My Skills: </h3>
+        <h3 className="mt-10 mr-30 ml-20 mb-10 font-bold text-2xl"> My Skills: </h3>
         <Swiper className="skillsSwiper"
             modules={[Navigation,  Scrollbar, A11y, Autoplay]}
             spaceBetween={50}
@@ -145,7 +209,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="contact" className="min-h-screen bg-slate-200">
+      <div id="contact" className="min-h-screen bg-slate-100">
         <section class="bg-slate-100 py-20 lg:py-[120px] overflow-hidden relative z-10 md:ml-64">
           <div class="container ml-20">
             <div class="flex flex-wrap lg:justify-between -mx-4">
