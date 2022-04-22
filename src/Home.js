@@ -2,15 +2,25 @@ import logo from './logo.svg';
 import Sidebar from './sideBar/Sidebar'
 import "./homePic.css"
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Scrollbar, A11y, Autoplay } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
+
 function Home() {
   return (
     <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 antialiased">
       <Sidebar />
-      <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 md:ml-64">
+      <div id="home" className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 md:ml-64">
         <img src="soloHiking.jpg" className="w-auto h-screen z-0"></img>
         <p className="text-center absolute top-1/4 left-1/2 px-10 py-10 bg-red-100"> I am Jack Wasilewski<br></br>I am a Coder</p>
       </div>
-      <div className="flex flex-col flex-auto flex-shrink-0 bg-slate-400 md:ml-64">
+      <div id="about" className="flex flex-col flex-auto flex-shrink-0 bg-slate-300 md:ml-64">
         <div className="mt-20  mb-20 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-4 gap-4">
           <div className="ml-20">
             <p className="text-3xl font-bold">About Me</p>
@@ -32,9 +42,52 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col flex-auto flex-shrink-0 bg-green-400 md:ml-64">
-        <h3 className="mt-20 mr-30 ml-20 font-bold text-2xl"> My Skills: </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 p-4 gap-4 mb-20">
+      <div id="skills" className="flex flex-col flex-auto flex-shrink-0 bg-slate-200 mb-10 md:ml-64">
+        <h3 className="mt-20 mr-30 ml-20 mb-10 font-bold text-2xl"> My Skills: </h3>
+        <Swiper className="skillsSwiper"
+            modules={[Navigation,  Scrollbar, A11y, Autoplay]}
+            spaceBetween={50}
+            slidesPerView={4}
+            navigation
+            autoplay={{delay: 2000, loop: true}}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+         >
+            <SwiperSlide><div className=" justify-center ml-10"> 
+            <img src="React-icon.png" className="mx-auto h-60 mt-2"></img>
+               <p className='text-center mt-5 text-3xl font-bold'> REACT </p>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide><div className="justify-center ml-10"> 
+            <img src="Node_logo.png" className="mx-auto h-60 mt-2"></img>
+               <p className='text-center mt-5 text-3xl font-bold'> NODE JS </p>
+            </div></SwiperSlide>
+            <SwiperSlide><div className="justify-center ml-10"> 
+            <img src="Sql_logo.png" className="mx-auto h-60 mt-2"></img>
+               <p className='text-center mt-5 text-3xl font-bold'> SQL </p>
+            </div></SwiperSlide>
+            <SwiperSlide><div className="justify-center ml-10"> 
+            <img src="firebase_logo.png" className="mx-auto h-60 mt-2"></img>
+               <p className='text-center mt-5 text-3xl font-bold'>  FIREBASE</p>
+            </div></SwiperSlide>
+            <SwiperSlide><div className=" justify-center ml-10"> 
+            <img src="CSS.png" className="mx-auto h-60 mt-2"></img>
+               <p className='text-center mt-5 text-3xl font-bold'> CSS </p>
+            </div></SwiperSlide>
+            <SwiperSlide><div className=" justify-center ml-10"> 
+            <img src="HTML.png" className="mx-auto h-60 mt-2"></img>
+               <p className='text-center mt-5 text-3xl font-bold'> HTML </p>
+            </div></SwiperSlide>
+            <SwiperSlide><div className=" justify-center ml-10"> 
+            <img src="JS.png" className="mx-auto h-60 mt-2"></img>
+               <p className='text-center mt-5 text-3xl font-bold'> JS </p>
+            </div></SwiperSlide>
+            <SwiperSlide><div className="justify-center ml-10"> 
+            <img src="cplusplus_logo.png" className="mx-auto h-60 mt-2"></img>
+               <p className='text-center mt-5 text-3xl font-bold'> C++ </p>
+            </div></SwiperSlide>
+         </Swiper>            
+        {/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 p-4 gap-4 mb-20">
           <div className="bg-slate-100 ml-10"> 
             <img className="mx-auto h-40 mt-2" src="React-icon.png"></img>
             <p className='text-center mt-5'> REACT </p>
@@ -67,32 +120,32 @@ function Home() {
             <img src="cplusplus_logo.png" className="mx-auto h-40 mt-2"></img>
             <p className='text-center mt-5'> C++ </p>
           </div>
-        </div>
+        </div> */}
       </div>
-      <div className="flex flex-col flex-auto flex-shrink-0 bg-orange-400 md:ml-64">
+      <div id="projects" className="flex flex-col flex-auto flex-shrink-0 bg-slate-300 md:ml-64">
         <h1 className="mt-20 mr-30 ml-20 font-bold text-4xl"> Projects</h1>
         <div className="flex flex-row mb-20">
           <div className="bg-slate-100 z-5 ml-20 mt-5 max-w-lg"> 
             <img src="geekhunt.png" className="mx-auto z-0 rounded-full h-80 mt-5"></img>
             <p className="text-center mt-5 font-bold text-4xl"> GEEK HUNT</p>
-            <p className="mt-5 ml-5 mr-5 mb-2 text-center text-xl"> A Freelancer Site For Connecting With Others</p>
-            <button className="ml-40 mb-3 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full "> More Details</button>
+            <p className="mt-5 ml-5 mr-5 mb-5 text-center text-xl"> A Freelancer Site For Connecting With Others</p>
+            <a href="/FSACapstone" className="ml-40 mb-3 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full "> More Details</a>
           </div>
           <div className="bg-slate-100 z-5 ml-20 mt-5 max-w-lg"> 
             <img src="solar_concentrator.png" className="mx-auto z-0 rounded-lg h-80 mt-5"></img>
             <p className="text-center mt-5 font-bold text-4xl ml-3 mr-3"> Ultra Tall Synthetic Tree </p>
-            <p className="mt-5 ml-5 mr-5 mb-2 text-center text-xl"> Mechanical Engineering Senior Design </p>
-            <button className="ml-40 mb-3 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full"> More Details</button>
+            <p className="mt-5 ml-5 mr-5 mb-5 text-center text-xl"> Mechanical Engineering Senior Design </p>
+            <a href="/SeniorDesign" className="mt-10 ml-40 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full"> More Details</a>
           </div>
           <div className="bg-slate-100 mt-5 ml-20 max-w-lg"> 
             <img src="IMDB_logo.png" className="mx-auto h-80 mt-5"></img>
             <p className="text-center mt-5 font-bold text-4xl"> Movie Matcher</p>
             <p className="mt-5 ml-5 mr-5 mb-5 text-center text-xl"> A Site To Help Pick Out Movies With a Partner</p>
-            <p className="mt-2 text-center bg-orange-500 text-white text-xl"> STILL IN PROGRESS</p>
+            <p className="mt-2 mb-5 text-center bg-orange-500 text-white text-xl"> STILL IN PROGRESS</p>
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-slate-100">
+      <div id="contact" className="min-h-screen bg-slate-200">
         <section class="bg-slate-100 py-20 lg:py-[120px] overflow-hidden relative z-10 md:ml-64">
           <div class="container ml-20">
             <div class="flex flex-wrap lg:justify-between -mx-4">
