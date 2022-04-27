@@ -13,60 +13,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 
+import Typewriter from "typewriter-effect";
+
 function Home() {
 
-   var ml4 = {};
-   ml4.opacityIn = [0,1];
-   ml4.scaleIn = [0.2, 1];
-   ml4.scaleOut = 3;
-   ml4.durationIn = 800;
-   ml4.durationOut = 600;
-   ml4.delay = 500;
-
-   anime.timeline({loop: true})
-   .add({
-      targets: '.ml4 .letters-1',
-      opacity: ml4.opacityIn,
-      scale: ml4.scaleIn,
-      duration: ml4.durationIn
-   }).add({
-      targets: '.ml4 .letters-1',
-      opacity: 0,
-      scale: ml4.scaleOut,
-      duration: ml4.durationOut,
-      easing: "easeInExpo",
-      delay: ml4.delay
-   }).add({
-      targets: '.ml4 .letters-2',
-      opacity: ml4.opacityIn,
-      scale: ml4.scaleIn,
-      duration: ml4.durationIn
-   }).add({
-      targets: '.ml4 .letters-2',
-      opacity: 0,
-      scale: ml4.scaleOut,
-      duration: ml4.durationOut,
-      easing: "easeInExpo",
-      delay: ml4.delay
-   }).add({
-      targets: '.ml4 .letters-3',
-      opacity: ml4.opacityIn,
-      scale: ml4.scaleIn,
-      duration: ml4.durationIn
-   }).add({
-      targets: '.ml4 .letters-3',
-      opacity: 0,
-      scale: ml4.scaleOut,
-      duration: ml4.durationOut,
-      easing: "easeInExpo",
-      delay: ml4.delay
-   }).add({
-      targets: '.ml4',
-      opacity: 0,
-      duration: 500,
-      delay: 500
-   });
-
+   
 
   return (
     <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 antialiased">
@@ -75,14 +26,18 @@ function Home() {
         <img src="soloHiking.jpg" className="w-auto h-screen z-0"></img>
         {/* <p className="text-center absolute top-1/4 left-1/2 px-10 py-10 bg-red-100"> I am Jack Wasilewski<br></br>I am a Coder</p> */}
         <div className="text-center absolute top-20 left-1/4 px-10 py-10">
-        <span className='iamJack'>I am Jack Wasilewski and I am a</span>
-            <h1 className="ml4">
-               <span className="letters letters-1">Coder</span>
-               <span className="letters letters-2">Engineer</span>
-               <span className="letters letters-3">Nerdy</span>
-            </h1>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <span className='iamJack'>Jack Wasilewski <br/></span>
+        <span className='text-xl'>
+        <Typewriter
+         options={{
+            strings: ['I am a Coder', 'I am an Engineer'],
+            autoStart: true,
+            loop: true,
+         }}
+         /> 
+         </span>
          </div>
+
       </div>
       <div id="about" className="flex flex-col flex-auto flex-shrink-0 bg-slate-300 md:ml-64">
         <div className="mt-20  mb-20 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-4 gap-4">
