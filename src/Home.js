@@ -101,8 +101,8 @@ function Home() {
                 <p className="mt-5 mr-40"> Name: Jack Wasilewksi</p>
                 <p className="mt-5 mr-40"> Email: jackw4@vt.edu</p>
               </div>
-              <p className="mt-5 mr-40"> From: Virginia</p>
-              <button className="mt-5 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">Download Resume</button>
+              <p className="mt-5 mb-5 mr-40"> From: Virginia</p>
+              <a href='/my_resume.pdf' download className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">Download Resume</a>
           </div>
         </div>
       </div>
@@ -188,8 +188,8 @@ function Home() {
       </div>
       <div id="projects" className="flex flex-col flex-auto flex-shrink-0 bg-slate-300 md:ml-64">
         <h1 className="mt-20 mr-30 ml-20 font-bold text-4xl"> Projects</h1>
-        <div className="flex flex-row mb-20">
-          <div className="bg-slate-100 z-5 ml-20 mt-5 max-w-lg"> 
+        <div className="flex flex-row mb-20 lg:flex-row md:flex-col sm:flex-col">
+          <div className="bg-slate-100 z-5 ml-20 mt-5 max-w-lg "> 
             <img src="geekhunt.png" className="mx-auto z-0 rounded-full h-80 mt-5"></img>
             <p className="text-center mt-5 font-bold text-4xl"> GEEK HUNT</p>
             <p className="mt-5 ml-5 mr-5 mb-5 text-center text-xl"> A Freelancer Site For Connecting With Others</p>
