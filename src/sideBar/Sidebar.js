@@ -5,7 +5,7 @@ export default function Sidebar() {
       <div className="fixed flex flex-col top-0 left-0 w-14 hover:w-64 md:w-64 bg-red-900 dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
           <div className="flex flex-shrink-0 mt-10 items-center justify-center h-36  space-x-3 flex-col ">
             <img src="SECProfilePicCropped.jpg" className="facePic"></img>
-            <p className="text-2xl font-semibold text-center">Jack Wasilewski</p>
+            <p className="text-2xl font-semibold text-center truncate">Jack Wasilewski</p>
           </div>
           <div className="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
           <ul className="flex flex-col py-4 space-y-1">

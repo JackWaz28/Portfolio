@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import Sidebar from './sideBar/Sidebar'
 import "./homePic.css"
-import anime from "animejs/lib/anime.es.js"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Scrollbar, A11y, Autoplay } from 'swiper';
+import { useState } from "react"
+import { db } from "./fbConfig"
+import { collection, addDoc } from "firebase/firestore"; 
 
 // Import Swiper styles
 import 'swiper/css';
@@ -17,17 +18,39 @@ import Typewriter from "typewriter-effect";
 
 function Home() {
 
-   
+   const [newName, setNewName] = useState('')
+   const [newEmail, setNewEmail] = useState('')
+   const [newSubject, setNewSubject] = useState('')
+   const [newMessage, setNewMessage] = useState('')
+
+   const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      const messageToAdd = {
+          name: newName,
+          email: newEmail,
+          subject: newSubject,
+          message: newMessage,
+      }
+
+      try {
+         const docRef = await addDoc(collection(db, "messages"), messageToAdd);
+       } catch (e) {
+         console.error("Error adding document: ", e);
+       }
+       alert("Thank you for reaching out to me! I will make sure to contact you soon.")
+      
+  }
 
   return (
-    <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 antialiased">
+    <div className="flex flex-col flex-auto flex-shrink-0 bg-blue-100 antialiased">
       <Sidebar />
       <div id="home" className="min-h-screen flex flex-col flex-auto flex-shrink-0 bg-blue-100 md:ml-64">
         <img src="soloHiking.jpg" className="w-auto h-screen z-0"></img>
         {/* <p className="text-center absolute top-1/4 left-1/2 px-10 py-10 bg-red-100"> I am Jack Wasilewski<br></br>I am a Coder</p> */}
-        <div className="text-center absolute top-20 left-1/4 px-10 py-10">
-        <span className='iamJack'>Jack Wasilewski <br/></span>
-        <span className='text-xl'>
+        <div className="text-center absolute top-20 left-1/3 px-10 py-10">
+        <span className='relative font-black lg:text-7xl sm:text-xl'>Jack Wasilewski <br/></span>
+        <span className='lg:text-3xl sm:text-base mt-3'>
         <Typewriter
          options={{
             strings: ['I am a Coder', 'I am an Engineer'],
@@ -46,7 +69,7 @@ function Home() {
             <img src="facePic.jpg" className="mt-10 outline-slate outline outline-slate-100 "></img>
           </div>
           <div className="col-span-2 ml-20 mr-20">
-            <h1 className="mt-20 mr-30 font-bold text-xl"> Who am I??</h1>
+            <h1 className="mt-20 mr-30 font-bold text-xl"> Who am I?</h1>
             <p className="mt-5 divide-y-8 mb-5"> Hi, I'm  Jack Wasilewksi.  I like to solve problems, create interesting and innovative products with team members, and I love to learn.  
               I am currently exploring opportunities as a Software Engineer in the Washington, DC, Virginia and Maryland area.  I'm open to new ideas, concepts, and value creative solutions
               which makes me a good fit as a Software Engineer because I know that the key to releasing a successful product is effective communication between team members and the customer.
@@ -69,8 +92,6 @@ function Home() {
             slidesPerView={4}
             navigation
             autoplay={{delay: 2000, loop: true}}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
          >
             <SwiperSlide><div className=" justify-center ml-10"> 
             <img src="React-icon.png" className="mx-auto h-60 mt-2"></img>
@@ -195,9 +216,10 @@ function Home() {
          </div>
          <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
             <div class="bg-white mr-20 relative rounded-lg p-8 sm:p-12 shadow-lg">
-               <form>
+               <form onSubmit={handleSubmit}>
                   <div class="mb-6">
                      <input
+                        onChange={(e) => setNewName(e.target.value)}
                         type="text"
                         placeholder="Your Name"
                         class="
@@ -215,6 +237,7 @@ function Home() {
                   </div>
                   <div class="mb-6">
                      <input
+                        onChange={(e) => setNewEmail(e.target.value)}
                         type="email"
                         placeholder="Your Email"
                         class="
@@ -232,6 +255,7 @@ function Home() {
                   </div>
                   <div class="mb-6">
                      <input
+                        onChange={(e) => setNewSubject(e.target.value)}
                         type="text"
                         placeholder="Subject"
                         class="
@@ -249,6 +273,7 @@ function Home() {
                   </div>
                   <div class="mb-6">
                      <textarea
+                        onChange={(e) => setNewMessage(e.target.value)}
                         rows="6"
                         placeholder="Message"
                         class="

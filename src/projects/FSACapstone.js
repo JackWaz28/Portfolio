@@ -59,7 +59,7 @@ function FSACapstone() {
                     
                   <div className="col-span-3 ml-20 mr-20">
                     <h1 className="mt-20 mr-30 font-bold text-xl"> Fullstack Acadmy Capstone Project</h1>
-                    <p className="mt-5 divide-y-8 mb-5"> Me and three other Fullstack Academy students worked together to design and build a social web app for users to connect and work with developers. This means that 
+                    <p className="mt-5 divide-y-8 mb-5"> Three other Fullstack Academy students and I worked together to design and build a social web app for users to connect and work with developers. This means that 
                       if you're looking for freelance work or if you're just looking to collaborate with other developers on a project this is the app for you. To enhance the capabilities of being able to connect with others 
                       we added chat functionality between users using the realtime cloud database in Firebase. Notifications used Firebase Cloud Functions, which is a framework that lets you automatically run backend code 
                       in response to events triggered by Firebase features and HTTPS requests. We also built a dashboard that can be used to organize users' projects and the ability to add others to a project. Users can also 
@@ -77,7 +77,7 @@ function FSACapstone() {
                         <li className='ml-6 text-lg'> Tailwind CSS  </li>
                       </ul>
                       <a className="mt-5 text-lg text-red-800 underline" href="https://youtu.be/qj9yw-NfOZc">Youtube Walktrhough</a>
-                      
+                      <a className="mt-5 text-lg text-blue-800 underline" href="https://geek-hunt.firebaseapp.com/">Geek Hunt</a>
                     </div>
                     
                   </div>

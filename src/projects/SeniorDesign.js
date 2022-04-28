@@ -40,13 +40,15 @@ function SeniorDesign() {
                       </div>
                   <div className="col-span-2 ml-20 mr-20">
                     <h1 className="mt-20 mr-30 font-bold text-xl"> Virginia Tech Senior Design Project</h1>
-                    <p className="mt-5 divide-y-8 mb-5"> Me and six other Virginia Tech Seniors seeked to build a synthetic tree, not only to replicate this natural process, but also to show its potential 
-                     for practical applications, such as pumped-storage hydropower. This project built on a 10-foot tall synthetic tree project completed the previous year, which proved
-                     that natural tree processes of trtansporting water upwards can be created synthetically. The next step towards demonstrating the practicality of synthetic trees is to prove scalability; 
-                     therefore, we created a 50-foot or taller synthetic tree, attached to and supported by a building. Since this is the largest synthetic tree ever built, the team 
-                     had to solve unique design challenges, such as an initial tree saturation and construction of a new solar concentrator. We designed and built a solar concentrator to heat the leaf to increase 
-                     the evaporation rate at the top of the tree. We also create a two component charging system to distrubute the water into the seven tubes and push the water up 50 feet. 
-                     After the design was finalized, the team completed the build of the tree and performed testing during the Spring of 2021. Finally we completed a </p>
+                    <p className="mt-5 divide-y-8 mb-5">Six other Virginia Tech Seniors and I seeked to build a synthetic tree, not only to replicate this natural process, 
+                    but also to show its potential for practical applications, such as pumped-storage hydropower. This project built on a 10-foot tall synthetic tree project
+                     completed the previous year, which proved that natural tree processes of transporting water upwards can be created synthetically. The next step towards
+                      demonstrating the practicality of synthetic trees is to prove scalability; therefore, we created a 50-foot or taller synthetic tree, attached to and 
+                      supported by a building. Since this is the largest synthetic tree ever built, the team had to solve unique design challenges, such as an initial tree 
+                      saturation and construction of a new solar concentrator. We designed and built a solar concentrator to heat the leaf to increase the evaporation rate
+                       at the top of the tree. We also create a two component charging system to distribute the water into the seven tubes and push the water up 50 feet. 
+                       After the design was finalized, the team completed the build of the tree and performed testing during the Spring of 2021. Finally we wrote a final 
+                       report outlining everything that we did throughout the year and what some of the next steps for the project could be. </p>
                     <p className="border-b-2"> </p>
                     <div className="flex flex-col">
                       {/* <p className="mt-5">Relevant Skills: Concept Analysis and Selection Focued on Customer Needs, CAD, Solidworks, Team Management, Budgeting and Testing and Validation </p> */}
